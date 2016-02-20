@@ -30,8 +30,8 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-PRODUCT_COPY_FILES += \
-    device/lge/d855/kernel:kernel
+PRODUCT_COPY_FILES := \
+	device/lge/geehrc/kernel:kernel
 
 PRODUCT_COPY_FILES += device/lge/geehrc/fstab.g3:recovery/root/fstab.g3
 PRODUCT_COPY_FILES += device/lge/geehrc/twrp.fstab:recovery/root/etc/twrp.fstab
