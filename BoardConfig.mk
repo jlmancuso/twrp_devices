@@ -9,10 +9,6 @@ ART_USE_OPTIMIZING_COMPILER := true
 
 TARGET_NO_BOOTLOADER := true
 
-# Inline kernel
-TARGET_KERNEL_CONFIG := gee_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/gee
-
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=geehrc lpj=67677 user_debug=31 androidboot.selinux=permissive
