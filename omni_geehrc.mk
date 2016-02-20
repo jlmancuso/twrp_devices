@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES := \
 	device/lge/geehrc/kernel:kernel
 
-PRODUCT_COPY_FILES += device/lge/geehrc/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/geehrc/fstab.geehrc:recovery/root/fstab.geehrc
 PRODUCT_COPY_FILES += device/lge/geehrc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := omni_geehrc
