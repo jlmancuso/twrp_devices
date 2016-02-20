@@ -33,20 +33,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/d851/kernel:kernel \
     device/lge/d851/dtb:dtb \
-    device/lge/d851/img_info:img_info \
-    device/lge/d851/multirom/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    device/lge/d851/multirom/sign:recovery/root/res/sign
+    device/lge/d851/img_info:img_info
 
 PRODUCT_COPY_FILES += device/lge/d851/fstab.g3:recovery/root/fstab.g3
-PRODUCT_COPY_FILES += device/lge/d851/multirom/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/lge/d851/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_NAME := omni_d851
 PRODUCT_DEVICE := d851
 PRODUCT_BRAND := LG
 PRODUCT_MODEL := G3
 PRODUCT_MANUFACTURER := LG
-
-# Kernel inline build
-#TARGET_KERNEL_CONFIG := d851_defconfig
-#TARGET_VARIANT_CONFIG := d851_defconfig
-#TARGET_SELINUX_CONFIG := d851_defconfig
