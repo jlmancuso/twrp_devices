@@ -31,15 +31,13 @@ PRODUCT_PACKAGES += \
     charger
 
 PRODUCT_COPY_FILES += \
-    device/lge/d855/kernel:kernel \
-    device/lge/d855/dtb:dtb \
-    device/lge/d855/img_info:img_info
+    device/lge/d855/kernel:kernel
 
-PRODUCT_COPY_FILES += device/lge/d855/fstab.g3:recovery/root/fstab.g3
-PRODUCT_COPY_FILES += device/lge/d855/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/lge/geehrc/fstab.g3:recovery/root/fstab.g3
+PRODUCT_COPY_FILES += device/lge/geehrc/twrp.fstab:recovery/root/etc/twrp.fstab
 
-PRODUCT_NAME := omni_d855
-PRODUCT_DEVICE := d855
+PRODUCT_NAME := omni_geehrc
+PRODUCT_DEVICE := geehrc
 PRODUCT_BRAND := LG
-PRODUCT_MODEL := G3
+PRODUCT_MODEL := Optimus G
 PRODUCT_MANUFACTURER := LG
