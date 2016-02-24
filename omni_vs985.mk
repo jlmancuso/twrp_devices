@@ -30,11 +30,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-PRODUCT_COPY_FILES += \
-    device/lge/vs985/kernel:kernel \
-    device/lge/vs985/dtb:dtb \
-    device/lge/vs985/img_info:img_info
-
 PRODUCT_COPY_FILES += device/lge/vs985/fstab.g3:recovery/root/fstab.g3
 PRODUCT_COPY_FILES += device/lge/vs985/twrp.fstab:recovery/root/etc/twrp.fstab
 
