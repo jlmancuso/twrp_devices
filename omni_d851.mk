@@ -30,11 +30,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-PRODUCT_COPY_FILES += \
-    device/lge/d851/kernel:kernel \
-    device/lge/d851/dtb:dtb \
-    device/lge/d851/img_info:img_info
-
 PRODUCT_COPY_FILES += device/lge/d851/fstab.g3:recovery/root/fstab.g3
 PRODUCT_COPY_FILES += device/lge/d851/twrp.fstab:recovery/root/etc/twrp.fstab
 

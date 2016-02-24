@@ -19,13 +19,23 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := d851
 
-# Prebuilt kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g3 user_debug=31 msm_rtb.filter=0x0 androidboot.selinux=permissive
-BOARD_KERNEL_BASE := 0x0000000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --dt device/lge/d851/dtb --kernel_offset 0x0008000 --ramdisk_offset 0x2000000 --second_offset 0x0f00000 --tags_offset 0x0000100
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+# Kernel
+BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/d851/mkbootimg.mk
-TARGET_PREBUILT_KERNEL := device/lge/d851/kernel
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=g3 user_debug=31 msm_rtb.filter=0x0 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x0008000 --ramdisk_offset 0x2000000
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+TARGET_REQUIRES_BUMP := true
+TARGET_KERNEL_CONFIG := d851_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/g3
+TARGET_KERNEL_MODULES := true
+DALVIK_VM_LIB := libart.so
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216		# 16M
