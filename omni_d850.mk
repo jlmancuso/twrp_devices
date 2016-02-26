@@ -26,12 +26,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
-
-PRODUCT_COPY_FILES += device/lge/d850/fstab.g3:recovery/root/fstab.g3
-PRODUCT_COPY_FILES += device/lge/d850/twrp.fstab:recovery/root/etc/twrp.fstab
+# inherit twrp configs
+$(call inherit-product, device/lge/d855/recovery/twrp.mk)
 
 PRODUCT_NAME := omni_d850
 PRODUCT_DEVICE := d850
