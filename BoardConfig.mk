@@ -42,7 +42,6 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 RECOVERY_SDCARD_ON_DATA := true
-TARGET_RECOVERY_FSTAB = device/lge/geehrc/fstab.geehrc
 
 # TWRP Flags
 TW_THEME := portrait_hdpi
