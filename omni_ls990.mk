@@ -27,7 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # inherit twrp configs
-$(call inherit-product, device/lge/d855/recovery/twrp.mk)
+$(call inherit-product, device/lge/ls990/recovery/twrp.mk)
 
 PRODUCT_NAME := omni_ls990
 PRODUCT_DEVICE := ls990
